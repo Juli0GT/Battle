@@ -26,4 +26,11 @@ describe Game do
       expect(game.victim.name).to eq("name1")
     end
   end
+
+  context 'when a player loses' do
+    it 'should display losing message' do
+      19.times {game.attack_player}
+      expect(game.message).to eq "name2 has died horribly. Boo hoo."
+    end
+  end
 end
