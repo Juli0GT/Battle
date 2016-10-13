@@ -1,7 +1,7 @@
 
 <body>
   <div class="left">
-    <h1><%= @p1_name %></h1>
+    <h1><%= $player1.name %></h1>
     <div class="img"><div class="dragon"><img src="http://i.imgur.com/dmsJvpc.png" alt="dragon" height="300" width="300">
     </div>
     </div>
@@ -9,11 +9,11 @@
   </div>
   <div class="center">
     <form action="/attack" method="post">
-    <input type="submit" value="Attack <%=@p2_name%>!">
+    <input type="submit" value="Attack <%=$player2.name%>!">
     </form>
   </div>
   <div class="right">
-    <h1><%= @p2_name %> </h1>
+    <h1><%= $player2.name %> </h1>
     <div class="img"><div id="hydra"><img src="http://i.imgur.com/yAMeJcI.png" height="300" width="300">
     </div>
     </div>
