@@ -4,12 +4,8 @@ require 'spec_helper'
 feature 'Battle' do
 
   before do
-    visit "/"
-    fill_in "p1_name", :with => 'Mike'
-    fill_in "p2_name", :with => 'Julio'
-    click_button "Enter Battle!!"
+    sign_in_and_play
   end
-
   scenario "expect names to be submitted and displayed" do
     expect(page).to have_text "Mike"
     expect(page).to have_text "Julio"
