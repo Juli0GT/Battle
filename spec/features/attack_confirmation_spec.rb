@@ -7,8 +7,13 @@ feature 'Attack' do
     click_button "Attack Julio!"
   end
 
-  scenario "expect confirmation of attack to be displayed" do
+  scenario "expect confirmation of attack to player2 to be displayed" do
     expect(page).to have_text "You have attacked Julio.  They are very angry."
   end
 
+  scenario "expect confirmation of attack to player1 to be displayed" do
+    click_button "Attack Mike!"
+    expect(page).to have_text "You have attacked Mike.  They are very angry."
+  end
+  
 end

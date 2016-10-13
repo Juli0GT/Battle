@@ -15,4 +15,6 @@ feature 'Battle' do
     expect(page).to have_text "100"
   end
 
+  
+
 end

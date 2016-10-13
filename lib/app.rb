@@ -22,13 +22,13 @@ class Battle < Sinatra::Base
   end
 
   post '/attack' do
-    $game.attack_player_2
-    redirect '/confirmation'
+    $game.attack_player
+    redirect '/play'
   end
 
-  get '/confirmation' do
-    erb :confirmation
-  end
+  # get '/confirmation' do
+  #   erb :confirmation
+  # end
 
   # start the server if ruby file executed directly
   run! if app_file == $0
