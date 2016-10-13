@@ -6,10 +6,8 @@ describe Player do
     expect(player.name).to eq (:name)
   end
 
-  context 'when attacked' do
-    it 'reduces player 2\'s HP by 10' do
-      expect{player.attack}.to change {player.hp}.by -10
+  # context 'when attacked' do
+    it ' can reduce players HP' do
+     expect{player.reduce_hp(10)}.to change {player.hp}.by (-10)
     end
   end
-
-end

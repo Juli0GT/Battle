@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative 'player'
+require_relative 'game'
 
 class Battle < Sinatra::Base
 
@@ -22,7 +23,8 @@ class Battle < Sinatra::Base
   end
 
   post '/attack' do
-    $player2.attack
+    $game = Game.new($player1, $player2)
+    $game.attack($player2)
     redirect '/confirmation'
   end
 

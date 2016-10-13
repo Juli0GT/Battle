@@ -10,12 +10,12 @@ class Player
     @name
   end
 
-  def attack
-    @HP -= 10
+  def reduce_hp(num)
+    @HP -= num
   end
 
   def hp
     @HP
   end
-  
+
 end
