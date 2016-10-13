@@ -1,22 +1,18 @@
 require 'game'
 
 describe Game do
-  subject(:game) { described_class.new(player1, player2) }
+  subject(:game) { described_class.new("name1", "name2") }
   let(:player1) { double(:player)}
   let(:player2) { double(:player)}
 
+  it 'makes an attack' do
+    expect(game.player2).to receive(:reduce_hp)
+    game.attack_player_2
+  end
 
-  # before do
-  #   allow(player1).to receive (:hp) {100}
-  #   allow(player2).to receive (:hp) {100}
-  # end
-
-  it "makes an attack" do
-    # expect{ game.attack(player2) }.to change {player2.hp}.by (-10)
-    # allow(player2).to receive(:reduce_hp).with(1).arguments
-    # game.attack(player2)
-    expect(player2).to receive(:reduce_hp)
-    game.attack(player2)
+  it 'generates two players' do
+    expect(game.player1).to be_a_kind_of Player
+    expect(game.player2).to be_a_kind_of Player
   end
 
 end

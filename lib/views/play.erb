@@ -1,23 +1,23 @@
 
 <body>
   <div class="left">
-    <h1><%= $player1.name %></h1>
+    <h1><%= $game.player1.name %></h1>
     <div class="img"><div class="dragon"><img src="http://i.imgur.com/dmsJvpc.png" alt="dragon" height="300" width="300">
     </div>
     </div>
-    <h4>HP: <%= $player1.hp %></h4>
+    <h4>HP: <%= $game.player1.hp %></h4>
   </div>
   <div class="center">
     <form action="/attack" method="post">
-    <input type="submit" value="Attack <%=$player2.name%>!">
+    <input type="submit" value="Attack <%=$game.player2.name%>!">
     </form>
   </div>
   <div class="right">
-    <h1><%= $player2.name %> </h1>
+    <h1><%= $game.player2.name %> </h1>
     <div class="img"><div id="hydra"><img src="http://i.imgur.com/yAMeJcI.png" height="300" width="300">
     </div>
     </div>
-    <h4>HP: <%= $player2.hp %></h4>
+    <h4>HP: <%= $game.player2.hp %></h4>
   </div>
 </body>
 
