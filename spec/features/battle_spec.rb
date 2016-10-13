@@ -3,11 +3,11 @@ require 'spec_helper'
 
 feature 'Battle' do
 
-  before :each do
+  before do
     visit "/"
     fill_in "p1_name", :with => 'Mike'
     fill_in "p2_name", :with => 'Julio'
-    click_button 'submit'
+    click_button "Enter Battle!!"
   end
 
   scenario "expect names to be submitted and displayed" do
