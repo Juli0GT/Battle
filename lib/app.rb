@@ -1,5 +1,5 @@
 require 'sinatra/base'
-require 'player'
+require_relative 'player'
 
 class Battle < Sinatra::Base
 
@@ -18,20 +18,15 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    @p1_hit_points = 100
-    @p2_hit_points = 100
     erb(:play)
   end
 
   post '/attack' do
+    $player2.attack
     redirect '/confirmation'
   end
 
   get '/confirmation' do
-    @p1_name = session[:p1_name]
-    @p2_name = session[:p2_name]
-    @p1_hit_points = 100
-    @p2_hit_points = 100
     erb :confirmation
   end
 

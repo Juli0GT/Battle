@@ -5,7 +5,7 @@
     <div class="img"><div class="dragon"><img src="http://i.imgur.com/dmsJvpc.png" alt="dragon" height="300" width="300">
     </div>
     </div>
-    <h4>HP: <%= @p1_hit_points%></h4>
+    <h4>HP: <%= $player1.hp %></h4>
   </div>
   <div class="center">
     <form action="/attack" method="post">
@@ -17,7 +17,7 @@
     <div class="img"><div id="hydra"><img src="http://i.imgur.com/yAMeJcI.png" height="300" width="300">
     </div>
     </div>
-    <h4>HP: <%= @p2_hit_points%></h4>
+    <h4>HP: <%= $player2.hp %></h4>
   </div>
 </body>
 
