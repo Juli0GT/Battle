@@ -8,9 +8,7 @@
     <h4>HP: <%= @p1_hit_points%></h4>
   </div>
   <div class="center">
-    <form action="/attack" method="post">
-    <input type="submit" value="Attack <%=@p2_name%>!">
-    </form>
+    <h1>You have attacked <%= @p2_name %>.  They are very angry.</h1>
   </div>
   <div class="right">
     <h1><%= @p2_name %> </h1>
